@@ -7,14 +7,29 @@ main {
     display: flex;
     flex-direction: row;
     flex: auto;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main>* {
+    min-width: 500px;
+}
+
+@media screen and (width < 520px){
+    main>* {
+        max-width: 300px;
+        min-width: 300px;
+    }
 }
 
 article {
     flex: 2;
     overflow-y: auto;
+    overflow-x: auto;
+    height: 30em;
 }
 
 aside {
     flex: 1;
-    overflow-y: auto;
 }
