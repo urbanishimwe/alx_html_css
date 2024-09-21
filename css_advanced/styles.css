@@ -114,8 +114,8 @@ header {
 
 /* END HEADER'S CSS */
 
-/* MAIN CSS */
-main {
+/* MAIN AND FOOTER CSS */
+main, footer {
 
     .flex-col,
     .flex-row {
@@ -282,10 +282,21 @@ main {
             padding-top: 1rem;
         }
     }
+
+    .footer {
+        padding-bottom: 2rem;
+        p {
+            color: var(--grey);
+        }
+        .flex-row {
+            justify-content: space-between;
+            width: 100%;
+        }
+        .socials>img {
+            margin-inline: 0.5rem;
+            width: 30px;
+        }
+    }
 }
 
-/* END OF MAIN'S CSS*/
-
-footer {
-    padding: 1rem 3rem;
-}
+/* END OF MAIN AND FOOTER CSS*/
