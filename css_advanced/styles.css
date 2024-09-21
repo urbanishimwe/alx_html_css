@@ -1,6 +1,15 @@
+:root {
+    --radial-bg: radial-gradient(85.9% 85.9% at 50% 14.1%, rgb(41, 48, 61) 0%, rgb(07, 16, 29) 100%);
+    --rose: #C271FF;
+    --white: #FFFFFF;
+    --black: #000000;
+    --grey: #979797;
+
+}
+
 html {
-    background-color: black;
-    color: white;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 body,
@@ -11,11 +20,6 @@ div,
 section {
     box-sizing: border-box;
     max-width: 100%;
-}
-
-:root {
-    --radial-bg: radial-gradient(85.9% 85.9% at 50% 14.1%, rgb(41, 48, 61) 0%, rgb(07, 16, 29) 100%);
-    --bg-rose: #C271FF;
 }
 
 body {
@@ -41,12 +45,28 @@ a {
 }
 
 button {
-    background-color: var(--bg-rose);
     border: none;
     padding: 1em;
     border-radius: 2em;
     box-shadow: black 0 2px 3px;
     cursor: pointer;
+}
+
+.bg-rose {
+    background-color: var(--rose);
+}
+
+.bg-white {
+    background-color: var(--white);
+    color: var(--black);
+}
+.color-rose {
+    color: var(--rose);
+    font-weight: bold;
+}
+
+.color-grey {
+    color: var(--grey);
 }
 
 /* HEADER CSS */
@@ -104,8 +124,15 @@ main {
         flex-direction: row;
     }
 
+    span {
+        margin-inline: 1rem;
+    }
+    span.color-rose {
+        margin-inline: 0;
+    }
     section {
         padding: 0 4rem;
+        margin: 0;
     }
 
     div {
@@ -124,17 +151,8 @@ main {
 
     h2 {
         font-size: 32px;
-        font-weight: 700;
+        font-weight: 100;
         font-style: normal;
-    }
-
-    span {
-        margin-inline: 1rem;
-    }
-
-    .highlight-learn::before {
-        content: "Learn ";
-        color: var(--bg-rose);
     }
 
     .pros {
@@ -175,7 +193,6 @@ main {
     }
 
     .quotes {
-        background-color: var(--bg-rose);
         p {
             font-style: italic;
         }
@@ -192,6 +209,51 @@ main {
             flex: 2;
         }
     }
+
+    .tutors {
+        h2 {
+            margin-top: 3rem;
+        }
+        .tutor-card {
+            max-width: 255px;
+            margin-inline: 2rem;
+            * {
+                padding-top: 0.2rem;
+                padding-bottom: 0.2rem;
+            }
+            >h3, .phillip, .ratings, p {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+        
+        .phillip {
+            justify-content: left;
+            >h4 {
+                margin-inline: 0.5rem;
+            }
+            img {
+                max-width: 30px;
+                max-height: 30px;
+            }
+        }
+        .star-icon {
+            max-width: 15px;
+            max-height: 15px;
+        }
+        .ratings {
+            justify-content: space-between;
+        }
+        .play-button-top {
+            position: relative;
+            left: 96px;
+            top: -120px;
+            max-width: 64px;
+            max-height: 64px;
+            padding: 0;
+            margin-bottom: -64px;
+        }
+    }
 }
 
 /* END OF MAIN'S CSS*/
@@ -199,3 +261,7 @@ main {
 footer {
     padding: 1rem 3rem;
 }
+
+/* Star_1 */
+
+/* Star_1 */
