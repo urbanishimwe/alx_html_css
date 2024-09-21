@@ -1,10 +1,10 @@
 :root {
-    --radial-bg: radial-gradient(85.9% 85.9% at 50% 14.1%, rgb(41, 48, 61) 0%, rgb(07, 16, 29) 100%);
+    --radial-bg: radial-gradient(85.9% 85.9% at 50% 14.1%, rgb(41, 48, 61) 0%, var(--dark-blue) 100%);
     --rose: #C271FF;
     --white: #FFFFFF;
     --black: #000000;
     --grey: #979797;
-
+    --dark-blue: #071629;
 }
 
 html {
@@ -60,6 +60,11 @@ button {
     background-color: var(--white);
     color: var(--black);
 }
+
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+
 .color-rose {
     color: var(--rose);
     font-weight: bold;
@@ -153,6 +158,7 @@ main {
         font-size: 32px;
         font-weight: 100;
         font-style: normal;
+        margin-top: 3rem;
     }
 
     .pros {
@@ -211,9 +217,6 @@ main {
     }
 
     .tutors {
-        h2 {
-            margin-top: 3rem;
-        }
         .tutor-card {
             max-width: 255px;
             margin-inline: 2rem;
@@ -252,6 +255,19 @@ main {
             max-height: 64px;
             padding: 0;
             margin-bottom: -64px;
+        }
+    }
+    .membership {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        .flex-col {
+            width: 250px;
+            >* {
+                margin-block: 1rem;
+            }
+            p {
+                max-width: 200px;
+            }
         }
     }
 }
