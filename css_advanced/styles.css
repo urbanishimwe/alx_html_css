@@ -48,7 +48,7 @@ button {
     border: none;
     padding: 1em;
     border-radius: 2em;
-    box-shadow: black 0 2px 3px;
+    box-shadow: var(--black) 0 2px 3px;
     cursor: pointer;
 }
 
@@ -270,6 +270,18 @@ main {
             }
         }
     }
+    .faq {
+        .flex-row {
+            >div {
+                width: 500px;
+                margin: 0 3rem 1rem 3rem;
+            }
+        }
+        p {
+            color: var(--grey);
+            padding-top: 1rem;
+        }
+    }
 }
 
 /* END OF MAIN'S CSS*/
@@ -277,7 +289,3 @@ main {
 footer {
     padding: 1rem 3rem;
 }
-
-/* Star_1 */
-
-/* Star_1 */
