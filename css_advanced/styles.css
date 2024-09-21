@@ -3,7 +3,12 @@ html {
     color: white;
 }
 
-body, header, main, footer, div, section {
+body,
+header,
+main,
+footer,
+div,
+section {
     box-sizing: border-box;
     max-width: 100%;
 }
@@ -20,10 +25,15 @@ body {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 1rem;
 }
 
-h1, h2, h3, p, button, a {
+h1,
+h2,
+h3,
+blockquote,
+p,
+button,
+a {
     font-family: 'Source Sans Pro';
     color: inherit;
     max-width: 100%;
@@ -36,11 +46,12 @@ button {
     padding: 1em;
     border-radius: 2em;
     box-shadow: black 0 2px 3px;
+    cursor: pointer;
 }
 
 /* HEADER CSS */
 header {
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
 
     nav {
         box-sizing: border-box;
@@ -81,56 +92,104 @@ header {
 /* MAIN CSS */
 main {
 
-    .flex-col, .flex-row, section {
+    .flex-col,
+    .flex-row {
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
     }
-    .flex-row{
+
+    .flex-row {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        >* {
-            flex: 1;
-        }
     }
+
     section {
         padding: 0 4rem;
     }
+
     div {
         padding: 3rem 0rem;
     }
-    .flex-col, section {
+
+    .flex-col {
         display: flex;
         flex-direction: column;
-        >*{
-            margin: 1rem 0;
-        }
     }
+
     h1 {
         font-weight: bold;
         font-size: 120px;
     }
+
     h2 {
         font-size: 32px;
         font-weight: 700;
         font-style: normal;
     }
+
     span {
         margin-inline: 1rem;
     }
+
     .highlight-learn::before {
         content: "Learn ";
         color: var(--bg-rose);
     }
+
     .pros {
-        p {
-            font-style: italic;
-            font-size: 16px;
-            text-align: center;
-            line-height: 24px;
-        }
         div {
             margin-inline: 2rem;
+            >* {
+                margin: 1rem 0;
+            }
+        }
+
+        p {
+            text-align: center;
+            font-style: italic;
+        }
+        >* {
+            flex: 1;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    blockquote, h3 {
+        font-style: normal;
+        font-size: 22px;
+        line-height: 34px;
+    }
+
+    blockquote {
+        font-style: normal;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .quotes {
+        background-color: var(--bg-rose);
+        p {
+            font-style: italic;
+        }
+
+        div {
+            padding-inline: 2rem;
+        }
+        .flex-row {
+            flex: 1;
+            justify-content: flex-end;
+        }
+        .flex-col {
+            align-items: flex-start;
+            flex: 2;
         }
     }
 }
@@ -140,8 +199,3 @@ main {
 footer {
     padding: 1rem 3rem;
 }
-
-
-/* Best « little smile */
-
-
