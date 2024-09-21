@@ -1,0 +1,147 @@
+html {
+    background-color: black;
+    color: white;
+}
+
+body, header, main, footer, div, section {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+:root {
+    --radial-bg: radial-gradient(85.9% 85.9% at 50% 14.1%, rgb(41, 48, 61) 0%, rgb(07, 16, 29) 100%);
+    --bg-rose: #C271FF;
+}
+
+body {
+    background: var(--radial-bg), url("smiling_woman.png");
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1rem;
+}
+
+h1, h2, h3, p, button, a {
+    font-family: 'Source Sans Pro';
+    color: inherit;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+button {
+    background-color: var(--bg-rose);
+    border: none;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: black 0 2px 3px;
+}
+
+/* HEADER CSS */
+header {
+    padding: 1rem 3rem;
+
+    nav {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        >* {
+            flex: 2;
+            box-sizing: border-box;
+            max-width: fit-content;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            li {
+                margin: 0 1rem;
+
+                a {
+                    text-decoration: none;
+                }
+
+                a:visited,
+                a:active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+/* END HEADER'S CSS */
+
+/* MAIN CSS */
+main {
+
+    .flex-col, .flex-row, section {
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        >* {
+            flex: 1;
+        }
+    }
+    section {
+        padding: 0 4rem;
+    }
+    div {
+        padding: 3rem 0rem;
+    }
+    .flex-col, section {
+        display: flex;
+        flex-direction: column;
+        >*{
+            margin: 1rem 0;
+        }
+    }
+    h1 {
+        font-weight: bold;
+        font-size: 120px;
+    }
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        font-style: normal;
+    }
+    span {
+        margin-inline: 1rem;
+    }
+    .highlight-learn::before {
+        content: "Learn ";
+        color: var(--bg-rose);
+    }
+    .pros {
+        p {
+            font-style: italic;
+            font-size: 16px;
+            text-align: center;
+            line-height: 24px;
+        }
+        div {
+            margin-inline: 2rem;
+        }
+    }
+}
+
+/* END OF MAIN'S CSS*/
+
+footer {
+    padding: 1rem 3rem;
+}
+
+
+/* Best « little smile */
+
+
