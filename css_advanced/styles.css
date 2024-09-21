@@ -23,7 +23,7 @@ section {
 }
 
 body {
-    background: var(--radial-bg), url("smiling_woman.png");
+    background: var(--radial-bg), url("media/smiling_woman.png");
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-position: bottom;
