@@ -1,0 +1,233 @@
+:root {
+    --orange: #FF6565;
+    --white: #FFFFFF;
+    --grey: #979797;
+    --dark-blue: #071629;
+}
+
+html {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    width: 100%;
+    max-width: 100%;
+}
+
+body,
+header,
+main,
+footer,
+nav,
+section {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    background: url("media/background.png");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+footer,
+nav,
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button,
+a {
+    font-family: 'Source Sans Pro';
+    color: inherit;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+a {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: none;
+}
+
+button {
+    box-sizing: border-box;
+    width: fit-content;
+    border: none;
+    margin: 2em 2em;
+    padding: 1em;
+    border-radius: 22px;
+    filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.5));
+    cursor: pointer;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin: 50px 0;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+/* h5 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+} */
+
+p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    max-width: 400px;
+}
+
+ul {
+    width: fit-content;
+    min-width: 400px;
+}
+
+li {
+    padding: 20px;
+}
+
+header {
+    height: 300px;
+}
+
+footer {
+    justify-content: flex-end;
+}
+
+input {
+    border: none;
+    border-bottom: solid var(--grey) 1px;
+    margin: 2em 2em;
+    width: 60%;
+    height: 50px;
+}
+
+input::placeholder {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--dark-blue);
+}
+
+a:hover,
+:active {
+    background-color: #FF6565;
+}
+
+button:hover,
+:active {
+    opacity: 0.9
+}
+
+.bg-orange {
+    background-color: var(--orange);
+}
+
+.bg-white {
+    background-color: var(--white);
+    color: var(--dark-blue);
+}
+
+.bg-dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.color-orange {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.color-grey {
+    color: var(--grey);
+}
+
+img.social-img {
+    width: 30px;
+    padding: 10px;
+
+}
+
+img.menu-img {
+    width: 20px;
+}
+
+.parent {
+    width: 80%;
+    max-width: 1000px;
+}
+
+.flex-row,
+.flex-col {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-content-space-between {
+    justify-content: space-between;
+}
+
+.flex-content-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.explanations {
+    width: 100%;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+
+.explanation {
+    width: 200px;
+    height: 180px;
+}
+
+.not-active {
+    display: none;
+}

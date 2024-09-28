@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Headphones </title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="flex-row parent flex-content-space-between">
+                <img src="media/menu.svg" alt="Menu" class="menu-img" id="menu-img">
+                </button>
+                <img src="media/logo.svg" alt="logo">
+
+                <ul class="flex-row menu-ul" id="menu-ul">
+                    <li><a href="#">what we do</a></li>
+                    <li><a href="#">our results</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section>
+            <div class="flex-col parent flex-content-center">
+                <div class="flex-col flex-content-center">
+                    <h1> Lorem ipsum dolor set amet lorem ipsum </h1>
+                    <h4> Lorem ipsum dolor set amet lorem ipsum dolor set </h4>
+                    <button class="bg-orange"> CALL TO ACTION </button>
+                </div>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+    const menuUl = document.getElementById("menu-ul");
+    const menuImg = document.getElementById("menu-img");
+    const notActive = "not-active";
+    const menuIconLink = "media/menu.svg"
+    const closeIconLink = "media/close.svg"
+
+    function menuImgShow() {
+        menuImg.classList.remove(notActive);
+        menuImg.src = menuIconLink
+    }
+
+    function menuImgHide() {
+        if (!menuImg.classList.contains(notActive)) {
+            menuImg.classList.add(notActive)
+        }
+        menuImg.src = menuIconLink
+    }
+
+    function menuUlHide() {
+        if (!menuUl.classList.contains(notActive)) {
+            menuUl.classList.add(notActive);
+        }
+        if (menuUl.classList.contains("flex-row")) {
+            menuUl.classList.remove("flex-row");
+        }
+        if (!menuUl.classList.contains("flex-col")) {
+            menuUl.classList.add("flex-col");
+        }
+    }
+
+    function menuUlShow() {
+        if (menuUl.classList.contains(notActive)) {
+            menuUl.classList.remove(notActive);
+        }
+        if (menuUl.classList.contains("flex-col")) {
+            menuUl.classList.remove("flex-col");
+        }
+        if (!menuUl.classList.contains("flex-row")) {
+            menuUl.classList.add("flex-row");
+        }
+    }
+
+    function adjustMenu() {
+        if (window.innerWidth <= 480) {
+            menuImgShow();
+            menuUlHide();
+            return
+        }
+        menuImgHide();
+        menuUlShow();
+    }
+
+    adjustMenu();
+    window.addEventListener("resize", () => {
+        adjustMenu();
+    });
+
+    menuImg.addEventListener('click', () => {
+        if (menuImg.src.endsWith(closeIconLink)) {
+            if (!menuUl.classList.contains(notActive)) {
+                menuUl.classList.add(notActive);
+            }
+            menuImg.src = menuIconLink;
+            return;
+        }
+        if (menuUl.classList.contains(notActive)) {
+            menuUl.classList.remove(notActive);
+        }
+        menuImg.src = closeIconLink;
+    })
+
+</script>
+
+</html>
